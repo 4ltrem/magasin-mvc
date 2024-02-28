@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Commande";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page de Commande</title>
+    <link rel="stylesheet" href="Styles/style.css">
+
+    <script>
+
+      function confirmFunction()
+      {
+         var r = confirm("Confirmation de la commande.");
+      }
+    </script>
+</head>
+<body>
+    <div class="titrePage2">
+        <br><h1>Formulaire de commande</h1>
+    </div>
+
+    <div class=leftBox2>
+        <form action="Confirmation" name="identForm" method="post">
+            <h2>Identification du client</h2><br>
+
+            <input required type="textbox" name="idClient" style="margin-right: 600px; float: right;">
+            <label for="idClient">Numéro de Membre:</label><br><br>
+
+            <input required type="textbox" name="TxtPreNom" style="margin-right: 600px; float: right;">
+            <label for="TxtPreNom">Prénom:</label><br><br>
+
+            <input required type="textbox" name="TxtNom" style="margin-right: 600px; float: right;">
+            <label for="TxtNom">Nom:</label><br><br>
+
+            <input required type="date" name="bDay" style="margin-right: 600px; float: right;">
+            <label for="bDay">Date de naissance:</label><br><br>
+
+
+            <input required type="tel" placeholder="(123)-456-7890" name="telephone" style="margin-right: 600px; float: right;"
+                   minlength="12" maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <label for="telephone">Téléphone:</label><br><br>
+
+            <input required type="textbox" name="Desc" style="margin-right: 600px; float: right;">
+            <label for="Desc">Description du produit:</label><br><br>
+
+            <input required type="textbox" name="Adresse" style="margin-right: 600px; float: right;"
+                   placeholder="123 rue Une Place, Ville, Province, Code postale" maxlength="50">
+            <label for="Adresse">Adresse:</label><br><br>
+
+            <input required type="textbox" name="Ville" style="margin-right: 600px; float: right;">
+            <label for="Ville">Ville:</label><br><br>
+
+            <input required type="textbox" name="Pays" style="margin-right: 600px; float: right;">
+            <label for="Pays">Pays:</label><br><br>
+
+            <input type="submit" value="Acheter" />
+        </form>
+    </div>
+</body>
+</html>

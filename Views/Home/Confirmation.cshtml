@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Confirmation";
+}
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title>Confirmation</title>
+</head>
+<body>
+    <h1>Voici la confirmation</h1>
+    <h4>Bonjour @{ @Html.Encode(ViewData["prenom"])}. </h4>
+
+    <h3>Vos informations :</h3>
+    <table class="table table-bordered table-responsive table-hover">
+
+        <tr>
+            <th>Numéro d'abonné</th>
+            <td>
+                @{ @Html.Encode(ViewData["memberID"]) }
+            </td>
+        </tr>
+
+        <tr>
+            <th>Nom complet</th>
+            <td>
+                @{ @Html.Encode(ViewData["prenom"])} @{@Html.Encode(ViewData["nom"]) }
+            </td>
+        </tr>
+
+        <tr>
+            <th>Date de naissance</th>
+            <td>
+                @{ @Html.Encode(ViewData["dob"]) }
+            </td>
+        </tr>
+
+        <tr>
+            <th>Numéro de téléphone</th>
+            <td>
+                @{ @Html.Encode(ViewData["tele"]) }
+            </td>
+        </tr>
+
+        <tr>
+            <th>Votre adresse</th>
+            <td>
+                @{ @Html.Encode(ViewData["adresse"])}
+            </td>
+        </tr>
+
+    </table>
+
+
+    @*
+        Vielle version
+
+        <h4>Numéro d'abonné: @{ @Html.Encode(ViewData["memberID"]) }</h4>
+        <h4>Nom complet: @{ @Html.Encode(ViewData["prenom"])} @{@Html.Encode(ViewData["nom"]) } </h4>
+        <h4>Date de naissance: @{ @Html.Encode(ViewData["dob"]) }</h4>
+        <h4>Numéro de téléphone: @{ @Html.Encode(ViewData["tele"]) }</h4>
+        <h4>Votre adresse: @{ @Html.Encode(ViewData["adresse"]) }</h4>
+    *@
+
+
+    <h3>Votre commande : </h3>
+
+    <table class="table table-bordered table-responsive table-hover">
+        <tr>
+            <th>Numero de confirmation</th>
+            <td>@{ @Html.Encode(ViewData["numeroconfirmation"]) }</td>
+        </tr>
+        <tr>
+            <th>Produit commandé</th>
+            <td>@{ @Html.Encode(ViewData["product"]) }</td>
+        </tr>
+        <tr>
+            <th>Date d'achat</th>
+            <td>@{ @Html.Encode(ViewData["dateachat"]) }</td>
+        </tr>
+    </table>
+    @*
+        Vielle version
+        
+        <h4>Numero de confirmation: @{ @Html.Encode(ViewData["numeroconfirmation"]) } </h4>
+        <h4>Produit commandé: @{ @Html.Encode(ViewData["product"]) } </h4>
+        <h4>Date d'achat: @{ @Html.Encode(ViewData["dateachat"]) } </h4>
+    *@
+
+
+</body>
+</html>

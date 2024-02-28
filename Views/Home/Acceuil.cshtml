@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Acceuil";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acceuil - Munch Munch</title>
+    
+    @Styles.Render("~/Content/style.css")
+</head>
+<body>
+    <div class="titrePage">
+        <h1>Bienvenue chez la boutique Munch Munch</h1>
+        
+    </div>
+   
+    <div class=mainBox>
+
+       
+        <a  class=nicebutton
+          @{ @Html.ActionLink("Commander", "Commander", "Home")  ; } 
+        </a>
+        <div class="middleBox">
+            <img src="~/Images/sacrifice.png" width="200" height="300">
+        </div>
+
+
+        <footer><h1>Almonds for the almond gods.</h1></footer>
+    </div>
+
+</body>
+</html>
+    
